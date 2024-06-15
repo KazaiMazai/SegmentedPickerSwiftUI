@@ -1,12 +1,11 @@
 //
 //  GenericMultiSegmentSelectorView.swift
-//  CommerceHQ-iOS
+//  SwiftySegmentedPicker
 //
 //  Created by Sergey Kazakov on 17.03.2021.
 //
 
 import SwiftUI
-
 
 public struct SegmentedPicker<Element, Content, Selection>: View
     where
@@ -36,7 +35,6 @@ public struct SegmentedPicker<Element, Content, Selection>: View
         self.selectionAlignment = selectionAlignment
     }
     
-
     public var body: some View {
         ZStack(alignment: Alignment(horizontal: .horizontalCenterAlignment,
                                     vertical: selectionAlignment)) {
@@ -73,8 +71,11 @@ public struct SegmentedPicker<Element, Content, Selection>: View
             }
         }
     }
+}
+
+private extension SegmentedPicker {
     
-    private func selectionSize(at index: Data.Index) -> CGSize {
+    func selectionSize(at index: Data.Index) -> CGSize {
         segmentSizes[index] ?? .zero
     }
 }

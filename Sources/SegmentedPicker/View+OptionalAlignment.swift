@@ -1,6 +1,6 @@
 //
 //  View+OptionalAlignment.swift
-//  CommerceHQ-iOS
+//  SwiftySegmentedPicker
 //
 //  Created by Sergey Kazakov on 17.03.2021.
 //
