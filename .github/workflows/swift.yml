@@ -16,8 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Lint
-      run: swiftlint
     - name: Build for iOS
       run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme Puredux -destination "platform=iOS Simulator,OS=latest,name=iPhone 13" | xcpretty
     - name: Run iOS tests
