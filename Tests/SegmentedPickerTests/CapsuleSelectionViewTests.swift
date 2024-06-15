@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 import XCTest
 import SnapshotTesting
 @testable import SegmentedPicker
@@ -13,11 +14,11 @@ import SnapshotTesting
 final class CapsuleSelectionViewTests: XCTestCase {
     func test_WhenSelectionIsNotProvided_SelectionIsNotVisible_Snapshot() {
         let view = CapsuleSelectionView(titles: ["One", "Two", "Three"])
-        assertSnapshots(of: view, as: [Snapshotting<CapsuleSelectionView, UIImage>.image(layout: .device(config: .iPhone13Pro))])
+        assertSnapshots(of: view, as: [.image(layout: .device(config: .iPhone13Pro))])
     }
     
     func test_WhenSelectionIsProvided_SelectionIsVisible_Snapshot() {
         let view = CapsuleSelectionView(titles: ["One", "Two", "Three"], selectedIndex: 1)
-        assertSnapshots(of: view, as: [Snapshotting<CapsuleSelectionView, UIImage>.image(layout: .device(config: .iPhone13Pro))])
+        assertSnapshots(of: view, as: [.image(layout: .device(config: .iPhone13Pro))])
     }
 }
