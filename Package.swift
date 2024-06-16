@@ -7,7 +7,9 @@ let package = Package(
     name: "SegmentedPicker",
     platforms: [
            .iOS(.v13),
-           .macOS(.v10_15)
+           .macOS(.v10_15),
+           .watchOS(.v6),
+           .tvOS(.v13)
        ],
     products: [
         .library(

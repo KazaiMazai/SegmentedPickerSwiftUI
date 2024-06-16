@@ -11,7 +11,9 @@ import XCTest
 import SnapshotTesting
 @testable import SegmentedPicker
 
+#if os(iOS) || os(tvOS)
 final class CapsuleSelectionViewTests: XCTestCase {
+
     func test_WhenSelectionIsNotProvided_SelectionIsNotVisible_Snapshot() {
         let view = CapsuleSelectionView(titles: ["One", "Two", "Three"])
         assertSnapshots(of: view, as: [.image(layout: .device(config: .iPhone13))])
@@ -22,3 +24,4 @@ final class CapsuleSelectionViewTests: XCTestCase {
         assertSnapshots(of: view, as: [.image(layout: .device(config: .iPhone13))])
     }
 }
+#endif
