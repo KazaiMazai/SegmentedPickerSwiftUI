@@ -12,14 +12,14 @@ let package = Package(
     products: [
         .library(
             name: "SegmentedPicker",
-            targets: ["SegmentedPicker"]),
+            targets: ["SegmentedPicker"])
     ],
     dependencies: [
         .package(
             url: "https://github.com/pointfreeco/swift-snapshot-testing",
             from: "1.12.0"
         )
-       
+
     ],
     targets: [
         .target(
@@ -30,6 +30,6 @@ let package = Package(
             dependencies: [
                 "SegmentedPicker",
                 .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
-            ]),
+            ])
     ]
 )

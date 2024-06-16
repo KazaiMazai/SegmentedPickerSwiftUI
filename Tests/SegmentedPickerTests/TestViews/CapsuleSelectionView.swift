@@ -30,7 +30,7 @@ struct CapsuleSelectionView: View {
                        .fill(Color.gray)
                })
        }
-       
+
        Spacer()
    }
 }
