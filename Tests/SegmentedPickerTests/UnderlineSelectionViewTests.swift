@@ -16,7 +16,7 @@ extension CGSize {
 
 #if os(iOS) || os(tvOS)
 final class UnderlineSelectionViewTest: XCTestCase {
-    
+
     func test_WhenSelectionIsNotProvided_SelectionIsNotVisible_Snapshot() {
         let view = UnderlineSelectionView(titles: ["One", "Two", "Three"])
         assertSnapshots(of: view, as: [.image(layout: .device(config: .iPhone13))])
