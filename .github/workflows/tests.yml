@@ -10,10 +10,16 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  lint:
     runs-on: macos-latest
-
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cirruslabs/swiftlint-action@v1
+        with:
+          version: latest
+          
+  build:
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
     - name: Build for iOS
