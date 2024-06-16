@@ -1,5 +1,11 @@
 # Swifty Segmented Picker
 
+<p align="left">
+    <a href="https://github.com/KazaiMazai/SwiftySegmentedPicker/actions">
+        <img src="https://github.com/KazaiMazai/SwiftySegmentedPicker/workflows/Tests/badge.svg" alt="Continuous Integration">
+    </a>
+</p>
+
 Custom segmented picker for SwiftUI. 
 
 ## Installation
