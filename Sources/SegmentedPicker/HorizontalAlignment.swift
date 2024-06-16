@@ -13,7 +13,7 @@ extension HorizontalAlignment {
             return dimension[HorizontalAlignment.center]
         }
     }
-    
+
     static var horizontalCenterAlignment: HorizontalAlignment {
         HorizontalAlignment(CenterAlignmentID.self)
     }

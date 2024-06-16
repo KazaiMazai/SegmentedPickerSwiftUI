@@ -11,7 +11,7 @@ import SwiftUI
 struct UnderlineSelectionView: View {
     let titles: [String]
     @State var selectedIndex: Int?
-    
+
     var body: some View {
         VStack {
             SegmentedPicker(
@@ -22,7 +22,7 @@ struct UnderlineSelectionView: View {
                 selectionAlignment: .bottom,
                 content: { item, isSelected in
                     Text(item)
-                    
+
                         .foregroundColor(isSelected ? Color.black : Color.gray )
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)

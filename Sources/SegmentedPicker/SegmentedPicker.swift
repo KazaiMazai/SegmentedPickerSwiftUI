@@ -11,9 +11,9 @@ public struct SegmentedPicker<Element, Content, Selection>: View
     where
     Content: View,
     Selection: View {
-    
+
     public typealias Data = [Element]
-    
+
     @State private var segmentSizes: [Data.Index: CGSize] = [:]
     @Binding private var selectedIndex: Data.Index?
 
@@ -34,7 +34,7 @@ public struct SegmentedPicker<Element, Content, Selection>: View
         self._selectedIndex = selectedIndex
         self.selectionAlignment = selectionAlignment
     }
-    
+
     public var body: some View {
         ZStack(alignment: Alignment(horizontal: .horizontalCenterAlignment,
                                     vertical: selectionAlignment)) {
@@ -74,7 +74,7 @@ public struct SegmentedPicker<Element, Content, Selection>: View
 }
 
 private extension SegmentedPicker {
-    
+
     func selectionSize(at index: Data.Index) -> CGSize {
         segmentSizes[index] ?? .zero
     }
@@ -85,13 +85,13 @@ private extension SegmentedPicker {
         let index: Int
         let size: CGSize
     }
-    
+
     struct SegmentSizePreferenceKey: PreferenceKey {
         static var defaultValue: SegmentSize { SegmentSize(index: .zero, size: .zero) }
-        
-        static func reduce(value: inout SegmentSize, 
+
+        static func reduce(value: inout SegmentSize,
                            nextValue: () -> SegmentSize) {
-            
+
             value = nextValue()
         }
     }
